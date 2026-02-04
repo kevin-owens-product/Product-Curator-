@@ -202,6 +202,172 @@ export enum ProfileVisibility {
   Private = 'private',
 }
 
+// ─── Creation & Curation Enums ───────────────────────────────────────────────
+
+export enum CreationStatus {
+  Draft = 'draft',
+  InProgress = 'in_progress',
+  Submitted = 'submitted',
+  InReview = 'in_review',
+  Graduated = 'graduated',
+  Killed = 'killed',
+  Parked = 'parked',
+}
+
+export enum CurationDecision {
+  Graduate = 'graduate',
+  Iterate = 'iterate',
+  Kill = 'kill',
+  Park = 'park',
+}
+
+export enum CurationSubmissionStatus {
+  Pending = 'pending',
+  InReview = 'in_review',
+  Decided = 'decided',
+}
+
+export enum ChangeTier {
+  Tier1 = 1,
+  Tier2 = 2,
+  Tier3 = 3,
+  Tier4 = 4,
+}
+
+// ─── Production Asset Enums ──────────────────────────────────────────────────
+
+export enum ProductionAssetType {
+  Feature = 'feature',
+  Service = 'service',
+  Integration = 'integration',
+  Component = 'component',
+  Page = 'page',
+  ApiEndpoint = 'api_endpoint',
+  Other = 'other',
+}
+
+export enum ProductionAssetStatus {
+  Active = 'active',
+  Deprecated = 'deprecated',
+  Decommissioned = 'decommissioned',
+}
+
+// ─── Coherence Enums ─────────────────────────────────────────────────────────
+
+export enum CoherenceFlagType {
+  PatternViolation = 'pattern_violation',
+  InconsistentUx = 'inconsistent_ux',
+  DuplicateFunctionality = 'duplicate_functionality',
+  ArchitecturalDrift = 'architectural_drift',
+}
+
+export enum CoherenceFlagSeverity {
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+}
+
+export enum CoherenceFlagStatus {
+  Open = 'open',
+  Acknowledged = 'acknowledged',
+  Resolved = 'resolved',
+  WontFix = 'wont_fix',
+}
+
+export enum PatternCategory {
+  UI = 'ui',
+  API = 'api',
+  Data = 'data',
+  Integration = 'integration',
+  Infrastructure = 'infrastructure',
+}
+
+export enum PatternStatus {
+  Active = 'active',
+  Deprecated = 'deprecated',
+  Proposed = 'proposed',
+}
+
+// ─── Incident Enums ──────────────────────────────────────────────────────────
+
+export enum IncidentSeverity {
+  Sev1 = 'sev1',
+  Sev2 = 'sev2',
+  Sev3 = 'sev3',
+  Sev4 = 'sev4',
+}
+
+export enum IncidentSource {
+  Alert = 'alert',
+  CustomerReport = 'customer_report',
+  InternalReport = 'internal_report',
+}
+
+// ─── Multi-Tenancy Enums ─────────────────────────────────────────────────────
+
+export enum SubscriptionPlan {
+  Free = 'free',
+  Starter = 'starter',
+  Professional = 'professional',
+  Enterprise = 'enterprise',
+}
+
+export enum SubscriptionStatus {
+  Trialing = 'trialing',
+  Active = 'active',
+  PastDue = 'past_due',
+  Canceled = 'canceled',
+}
+
+export enum InvoiceStatus {
+  Draft = 'draft',
+  Open = 'open',
+  Paid = 'paid',
+  Void = 'void',
+  Uncollectible = 'uncollectible',
+}
+
+export enum DataResidencyRegion {
+  US = 'us',
+  EU = 'eu',
+  APAC = 'apac',
+}
+
+// ─── User & Role Enums ──────────────────────────────────────────────────────
+
+export enum OrgRole {
+  Owner = 'owner',
+  Admin = 'admin',
+  Member = 'member',
+}
+
+export enum WorkspaceRole {
+  Admin = 'admin',
+  Curator = 'curator',
+  Creator = 'creator',
+}
+
+export enum UserStatus {
+  Invited = 'invited',
+  Active = 'active',
+  Deactivated = 'deactivated',
+}
+
+export enum AuthProvider {
+  Email = 'email',
+  Google = 'google',
+  SAML = 'saml',
+  OIDC = 'oidc',
+}
+
+// ─── Audit Enums ─────────────────────────────────────────────────────────────
+
+export enum AuditActorType {
+  User = 'user',
+  System = 'system',
+  Admin = 'admin',
+}
+
 // ─── Point Action Types ──────────────────────────────────────────────────────
 
 export enum PointAction {
@@ -209,16 +375,21 @@ export enum PointAction {
   SubmitForCuration = 'submit_for_curation',
   CreationGraduates = 'creation_graduates',
   CreationKilled = 'creation_killed',
+  CreationParked = 'creation_parked',
   OwnProductionAsset = 'own_production_asset',
   ZeroIncidents = 'zero_incidents',
+  IncidentDeduction = 'incident_deduction',
   SubmitToChallenge = 'submit_to_challenge',
   WinChallenge = 'win_challenge',
   RunnerUp = 'runner_up',
   HonorableMention = 'honorable_mention',
+  RegisterForHackathon = 'register_for_hackathon',
   CompleteHackathon = 'complete_hackathon',
   WinHackathon = 'win_hackathon',
   HelpAsMentor = 'help_as_mentor',
   QualityCuration = 'quality_curation',
+  JudgeSubmissions = 'judge_submissions',
+  FlagConfirmedCoherenceIssue = 'flag_confirmed_coherence_issue',
   Streak7Days = 'streak_7_days',
   Streak30Days = 'streak_30_days',
   FirstCreation = 'first_creation',

@@ -48,7 +48,7 @@ describe('PointsService', () => {
           action: PointAction.CreateCreation,
           override_points: -5,
         })
-      ).toThrow('Points must be positive');
+      ).toThrow('Only deduction actions can have negative points');
     });
   });
 

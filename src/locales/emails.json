@@ -1,0 +1,23 @@
+{
+  "emails": {
+    "invitation": {
+      "subject": "You've been invited to join {{tenantName}}",
+      "body": "{{inviterName}} has invited you to join {{tenantName}} on Product Curator."
+    },
+    "curationDecision": {
+      "subject": "Curation decision: {{decision}} for '{{creationTitle}}'",
+      "graduate": "Your creation has been approved for production!",
+      "iterate": "Your creation needs some changes before next review.",
+      "kill": "Your creation has been retired. Learnings have been captured.",
+      "park": "Your creation has been parked for future consideration."
+    },
+    "challengeWinner": {
+      "subject": "Congratulations! You won the {{challengeName}} challenge",
+      "body": "Your submission placed {{placement}} in the challenge."
+    },
+    "incidentAlert": {
+      "subject": "Incident Alert: {{title}} ({{severity}})",
+      "body": "An incident has been attributed to your production asset."
+    }
+  }
+}

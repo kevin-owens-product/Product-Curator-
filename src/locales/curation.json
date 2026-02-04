@@ -1,0 +1,23 @@
+{
+  "curation": {
+    "submitted": "Curation submission received",
+    "claimed": "Submission claimed for review by curator",
+    "decided": "Curation decision recorded: {{decision}}",
+    "resubmitted": "Creation resubmitted for curation (iteration {{count}})",
+    "graduate": "Creation approved for graduation to production",
+    "iterate": "Creation needs iteration before next review",
+    "kill": "Creation retired — learnings captured",
+    "park": "Creation parked for future consideration"
+  },
+  "fiveQuestions": {
+    "q1": "Should this exist?",
+    "q2": "What breaks if it's wrong?",
+    "q3": "Does it fit the platform?",
+    "q4": "Who will own it?",
+    "q5": "What's the ongoing burden?"
+  },
+  "validation": {
+    "allQuestionsRequired": "All five curation questions must be answered",
+    "rationaleRequired": "Decision rationale is required"
+  }
+}

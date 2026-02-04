@@ -35,8 +35,12 @@ export class PointsService {
   awardPoints(request: AwardPointsRequest): PointTransaction {
     const points = request.override_points ?? this.getPointValue(request.action);
 
-    if (points <= 0) {
-      throw new ValidationError('Points must be positive');
+    const DEDUCTION_ACTIONS: PointAction[] = [PointAction.IncidentDeduction];
+    if (points === 0) {
+      throw new ValidationError('Points cannot be zero');
+    }
+    if (points < 0 && !DEDUCTION_ACTIONS.includes(request.action)) {
+      throw new ValidationError('Only deduction actions can have negative points');
     }
 
     const transaction: PointTransaction = {
@@ -193,7 +197,7 @@ export class PointsService {
       last_updated: new Date().toISOString(),
     };
 
-    existing.total_points += points;
+    existing.total_points = Math.max(0, existing.total_points + points);
     existing.points_this_month += points;
     existing.points_this_quarter += points;
     existing.points_this_year += points;
@@ -211,16 +215,21 @@ export class PointsService {
       [PointAction.SubmitForCuration]: 'Submitted creation for curation',
       [PointAction.CreationGraduates]: 'Creation graduated successfully',
       [PointAction.CreationKilled]: 'Creation killed with learnings captured',
+      [PointAction.CreationParked]: 'Creation parked for later',
       [PointAction.OwnProductionAsset]: 'Monthly production asset ownership bonus',
       [PointAction.ZeroIncidents]: 'Monthly zero incidents bonus',
+      [PointAction.IncidentDeduction]: 'Incident deduction',
       [PointAction.SubmitToChallenge]: 'Submitted solution to challenge',
       [PointAction.WinChallenge]: 'Won a challenge',
       [PointAction.RunnerUp]: 'Challenge runner-up',
       [PointAction.HonorableMention]: 'Challenge honorable mention',
+      [PointAction.RegisterForHackathon]: 'Registered for hackathon',
       [PointAction.CompleteHackathon]: 'Completed a hackathon',
       [PointAction.WinHackathon]: 'Won a hackathon',
       [PointAction.HelpAsMentor]: 'Helped as a mentor',
       [PointAction.QualityCuration]: 'Quality curation decision',
+      [PointAction.JudgeSubmissions]: 'Judged a submission',
+      [PointAction.FlagConfirmedCoherenceIssue]: 'Flagged a confirmed coherence issue',
       [PointAction.Streak7Days]: '7-day activity streak bonus',
       [PointAction.Streak30Days]: '30-day activity streak bonus',
       [PointAction.FirstCreation]: 'First creation bonus',

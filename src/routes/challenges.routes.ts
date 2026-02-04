@@ -121,6 +121,18 @@ export function createChallengeRoutes(
       submission_id: req.params.submissionId,
       ...req.body,
     });
+
+    // Award points to the judge
+    if (req.body.judge_id) {
+      pointsService.awardPoints({
+        user_id: req.body.judge_id,
+        tenant_id: req.body.tenant_id,
+        action: PointAction.JudgeSubmissions,
+        source_type: 'challenge',
+        source_id: req.params.challengeId,
+      });
+    }
+
     res.status(201).json(score);
   }));
 

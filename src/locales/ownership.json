@@ -1,0 +1,12 @@
+{
+  "ownership": {
+    "assetCreated": "Production asset '{{name}}' registered",
+    "transferred": "Ownership transferred to {{newOwner}}",
+    "deprecated": "Asset marked as deprecated",
+    "incidentRecorded": "Incident recorded for asset"
+  },
+  "audit": {
+    "orphanedAssets": "{{count}} orphaned assets found",
+    "staleAssets": "{{count}} stale assets (no updates in {{days}} days)"
+  }
+}

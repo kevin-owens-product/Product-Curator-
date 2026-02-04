@@ -64,6 +64,16 @@ export function createHackathonRoutes(
       hackathon_id: req.params.id,
       ...req.body,
     });
+
+    // Award points for registration
+    pointsService.awardPoints({
+      user_id: req.body.user_id,
+      tenant_id: req.body.tenant_id,
+      action: PointAction.RegisterForHackathon,
+      source_type: 'hackathon',
+      source_id: req.params.id,
+    });
+
     res.status(201).json(registration);
   }));
 

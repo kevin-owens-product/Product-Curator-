@@ -1,0 +1,16 @@
+{
+  "billing": {
+    "subscriptionCreated": "Subscription created on {{plan}} plan",
+    "planChanged": "Plan changed to {{plan}}",
+    "canceled": "Subscription canceled",
+    "limitReached": "{{resource}} limit reached for your plan",
+    "trialEnding": "Your trial ends on {{date}}",
+    "upgradeRequired": "Please upgrade to access this feature"
+  },
+  "plans": {
+    "free": "Free",
+    "starter": "Starter",
+    "professional": "Professional",
+    "enterprise": "Enterprise"
+  }
+}

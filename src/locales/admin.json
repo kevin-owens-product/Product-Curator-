@@ -1,0 +1,17 @@
+{
+  "admin": {
+    "featureFlags": {
+      "created": "Feature flag '{{name}}' created",
+      "toggled": "Feature flag {{action}}",
+      "rollout": "Rollout set to {{percentage}}%"
+    },
+    "impersonation": {
+      "started": "Impersonation session started for user {{userId}}",
+      "logged": "Impersonation logged"
+    },
+    "system": {
+      "healthy": "System is healthy",
+      "degraded": "System performance degraded"
+    }
+  }
+}

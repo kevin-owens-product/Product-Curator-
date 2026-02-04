@@ -1,0 +1,24 @@
+{
+  "errors": {
+    "notFound": "{{resource}} not found",
+    "conflict": "{{message}}",
+    "validation": "{{message}}",
+    "unauthorized": "Authentication required",
+    "forbidden": "Insufficient permissions",
+    "internal": "An unexpected error occurred"
+  },
+  "pagination": {
+    "showing": "Showing {{from}}-{{to}} of {{total}}",
+    "noResults": "No results found"
+  },
+  "actions": {
+    "create": "Create",
+    "update": "Update",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "approve": "Approve",
+    "reject": "Reject"
+  }
+}

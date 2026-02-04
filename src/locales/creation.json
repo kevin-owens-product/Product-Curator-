@@ -1,0 +1,18 @@
+{
+  "creation": {
+    "created": "Creation '{{title}}' has been registered",
+    "updated": "Creation updated successfully",
+    "statusChanged": "Creation status changed to {{status}}",
+    "collaboratorAdded": "{{name}} added as collaborator",
+    "collaboratorRemoved": "Collaborator removed",
+    "submitted": "Creation submitted for curation",
+    "graduated": "Congratulations! Your creation has graduated to production",
+    "killed": "Creation has been retired with learnings captured",
+    "parked": "Creation has been parked for later consideration"
+  },
+  "validation": {
+    "titleRequired": "Creation title is required",
+    "descriptionRequired": "Creation description is required",
+    "invalidStatus": "Invalid status transition"
+  }
+}

@@ -22,10 +22,14 @@ export interface BadgeEvaluationContext {
   consecutive_challenge_wins: number;
   hackathons_completed: number;
   hackathons_won: number;
+  team_hackathons_completed: number;
+  individual_hackathons_won: number;
   streak_daily: number;
   streak_weekly: number;
   mentor_sessions: number;
   curation_reviews: number;
+  submissions_judged: number;
+  confirmed_flags: number;
   total_points: number;
   all_time_rank: number;
   join_date: string;
@@ -255,19 +259,22 @@ export class BadgeService {
       { tenant_id: null, name: 'Year Legend', description: '365-day active streak', icon: 'calendar-star', rarity: BadgeRarity.Legendary, criteria_type: BadgeCriteriaType.Streak, criteria_config: { field: 'streak_daily', threshold: 365 }, hidden: false },
 
       // Hackathon badges
-      { tenant_id: null, name: 'Hackathon Survivor', description: 'Complete a hackathon', icon: 'laptop-code', rarity: BadgeRarity.Common, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'hackathons_completed', threshold: 1 }, hidden: false },
-      { tenant_id: null, name: 'Hackathon Victor', description: 'Win a hackathon', icon: 'rocket', rarity: BadgeRarity.Rare, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'hackathons_won', threshold: 1 }, hidden: false },
+      { tenant_id: null, name: 'Hacker', description: 'Complete first hackathon', icon: 'laptop-code', rarity: BadgeRarity.Common, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'hackathons_completed', threshold: 1 }, hidden: false },
+      { tenant_id: null, name: 'Team Player', description: 'Complete 3 team hackathons', icon: 'users-cog', rarity: BadgeRarity.Uncommon, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'team_hackathons_completed', threshold: 3 }, hidden: false },
+      { tenant_id: null, name: 'Solo Hero', description: 'Win individual hackathon', icon: 'user-astronaut', rarity: BadgeRarity.Rare, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'individual_hackathons_won', threshold: 1 }, hidden: false },
+      { tenant_id: null, name: 'Hackathon Legend', description: 'Win 5 hackathons', icon: 'rocket', rarity: BadgeRarity.Legendary, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'hackathons_won', threshold: 5 }, hidden: false },
 
       // Mentorship badges
       { tenant_id: null, name: 'Helping Hand', description: 'Help as a mentor', icon: 'hand-holding', rarity: BadgeRarity.Common, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'mentor_sessions', threshold: 1 }, hidden: false },
-      { tenant_id: null, name: 'Super Mentor', description: 'Help 10 hackathon teams', icon: 'hands-helping', rarity: BadgeRarity.Uncommon, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'mentor_sessions', threshold: 10 }, hidden: false },
+      { tenant_id: null, name: 'Mentor', description: 'Help 10 hackathon teams', icon: 'hands-helping', rarity: BadgeRarity.Uncommon, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'mentor_sessions', threshold: 10 }, hidden: false },
 
       // Curation badges
-      { tenant_id: null, name: 'Wise Judge', description: 'Review as a curator', icon: 'gavel', rarity: BadgeRarity.Common, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'curation_reviews', threshold: 1 }, hidden: false },
+      { tenant_id: null, name: 'Wise Judge', description: 'Judge 20 submissions', icon: 'gavel', rarity: BadgeRarity.Uncommon, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'submissions_judged', threshold: 20 }, hidden: false },
       { tenant_id: null, name: '100 Reviews', description: 'Complete 100 curation reviews', icon: 'book-open', rarity: BadgeRarity.Uncommon, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'curation_reviews', threshold: 100 }, hidden: false },
 
       // Special badges
       { tenant_id: null, name: 'Early Adopter', description: 'Join in the first month', icon: 'clock', rarity: BadgeRarity.Rare, criteria_type: BadgeCriteriaType.Special, criteria_config: { rule: 'early_adopter' }, hidden: true },
+      { tenant_id: null, name: 'Bug Hunter', description: 'Flag 10 confirmed coherence issues', icon: 'bug', rarity: BadgeRarity.Rare, criteria_type: BadgeCriteriaType.Count, criteria_config: { field: 'confirmed_flags', threshold: 10 }, hidden: false },
       { tenant_id: null, name: 'Community Champion', description: 'Top 10 all-time points', icon: 'users', rarity: BadgeRarity.Epic, criteria_type: BadgeCriteriaType.Special, criteria_config: { rule: 'community_champion' }, hidden: false },
       { tenant_id: null, name: "Founder's Circle", description: 'Top 3 all-time points', icon: 'gem', rarity: BadgeRarity.Legendary, criteria_type: BadgeCriteriaType.Special, criteria_config: { rule: 'founders_circle' }, hidden: false },
     ];
