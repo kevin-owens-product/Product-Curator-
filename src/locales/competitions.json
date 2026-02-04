@@ -1,0 +1,45 @@
+{
+  "competition.title": "Competitions",
+  "competition.create": "Create Competition",
+  "competition.join": "Join Competition",
+  "competition.joined": "You're In!",
+
+  "competition.type.sprint": "Sprint",
+  "competition.type.seasonal": "Seasonal",
+  "competition.type.ongoing": "Ongoing",
+  "competition.type.tournament": "Tournament",
+
+  "competition.status.upcoming": "Upcoming",
+  "competition.status.active": "Active",
+  "competition.status.completed": "Completed",
+
+  "competition.leaderboard": "Competition Leaderboard",
+  "competition.your_rank": "Your Rank: #{rank}",
+  "competition.score": "Score: {score}",
+  "competition.entries": "{count, plural, one {# participant} other {# participants}}",
+
+  "competition.sprint.theme": "Sprint Theme: {theme}",
+  "competition.sprint.duration": "{days}-day sprint",
+  "competition.sprint.auto_score": "Auto-scored",
+
+  "competition.tournament.bracket": "Tournament Bracket",
+  "competition.tournament.round": "Round {round}",
+  "competition.tournament.match": "Match {match}",
+  "competition.tournament.bye": "BYE",
+  "competition.tournament.tbd": "TBD",
+  "competition.tournament.seed": "Seed #{seed}",
+  "competition.tournament.format.single_elimination": "Single Elimination",
+  "competition.tournament.format.double_elimination": "Double Elimination",
+  "competition.tournament.format.round_robin": "Round Robin",
+
+  "competition.prize.first": "1st Place",
+  "competition.prize.second": "2nd Place",
+  "competition.prize.third": "3rd Place",
+  "competition.prize.category": "Category: {category}",
+
+  "competition.filter.type": "Type",
+  "competition.filter.status": "Status",
+  "competition.sort.newest": "Newest",
+  "competition.sort.ending_soon": "Ending Soon",
+  "competition.sort.most_participants": "Most Participants"
+}

@@ -1,0 +1,69 @@
+{
+  "hackathon.title": "Hackathons",
+  "hackathon.create": "Create Hackathon",
+  "hackathon.register": "Register for Hackathon",
+  "hackathon.registered": "You're Registered!",
+  "hackathon.team": "Your Team",
+  "hackathon.find_team": "Find a Team",
+  "hackathon.no_team": "No team yet",
+
+  "hackathon.status.announced": "Announced",
+  "hackathon.status.registration_open": "Registration Open",
+  "hackathon.status.in_progress": "In Progress",
+  "hackathon.status.judging": "Judging",
+  "hackathon.status.completed": "Completed",
+
+  "hackathon.starts_in": "Starts in {time}",
+  "hackathon.ends_in": "Ends in {time}",
+  "hackathon.time_remaining": "{time} remaining",
+  "hackathon.registration_closes": "Registration closes {date}",
+
+  "hackathon.format.individual": "Individual",
+  "hackathon.format.team": "Team",
+  "hackathon.format.both": "Individual or Team",
+  "hackathon.team_size": "{min}-{max} members per team",
+
+  "hackathon.track": "Track",
+  "hackathon.tracks": "Tracks",
+  "hackathon.prizes": "Prizes",
+  "hackathon.rules": "Rules",
+
+  "hackathon.team.create": "Create a Team",
+  "hackathon.team.join": "Join Team",
+  "hackathon.team.leave": "Leave Team",
+  "hackathon.team.captain": "Team Captain",
+  "hackathon.team.members": "{count, plural, one {# member} other {# members}}",
+  "hackathon.team.full": "Team is full",
+  "hackathon.team.looking": "Looking for teammates",
+
+  "hackathon.mentor.request": "Request Mentor Help",
+  "hackathon.mentor.queue": "Queue Position: {position}",
+  "hackathon.mentor.available": "{count, plural, one {# mentor} other {# mentors}} available",
+  "hackathon.mentor.claim": "Claim Request",
+  "hackathon.mentor.complete": "Complete Session",
+  "hackathon.mentor.rate": "Rate Session",
+
+  "hackathon.submit": "Submit Project",
+  "hackathon.submission.draft": "Draft",
+  "hackathon.submission.submitted": "Submitted",
+  "hackathon.submission.continue": "Continue Working",
+  "hackathon.submission.preview": "Preview",
+
+  "hackathon.dashboard.announcements": "Announcements",
+  "hackathon.dashboard.your_team": "Your Team",
+  "hackathon.dashboard.submission": "Your Submission",
+  "hackathon.dashboard.live_stats": "Live Stats",
+  "hackathon.dashboard.teams": "{count, plural, one {# team} other {# teams}}",
+  "hackathon.dashboard.participants": "{count, plural, one {# participant} other {# participants}}",
+  "hackathon.dashboard.submitted": "{count} submitted",
+
+  "hackathon.results.winners": "Winners",
+  "hackathon.results.all_submissions": "All Submissions",
+  "hackathon.results.feedback": "Judge Feedback",
+  "hackathon.results.recap": "Event Recap",
+
+  "hackathon.registration.skills": "Your Skills",
+  "hackathon.registration.interests": "Your Interests",
+  "hackathon.registration.looking_for_team": "I'm looking for a team",
+  "hackathon.registration.calendar": "Add to Calendar"
+}

@@ -1,0 +1,62 @@
+{
+  "challenge.title": "Challenges",
+  "challenge.create": "Create Challenge",
+  "challenge.open": "Open Challenge",
+  "challenge.closed": "Challenge Closed",
+  "challenge.judging": "Judging in Progress",
+  "challenge.completed": "Challenge Completed",
+  "challenge.canceled": "Challenge Canceled",
+  "challenge.draft": "Draft",
+
+  "challenge.submit": "Submit Solution",
+  "challenge.edit_submission": "Edit Submission",
+  "challenge.deadline": "Deadline: {date}",
+  "challenge.submissions": "{count, plural, one {# submission} other {# submissions}}",
+  "challenge.closing_soon": "Closing Soon",
+  "challenge.time_remaining": "{time} remaining",
+
+  "challenge.type.customer_problem": "Customer Problem",
+  "challenge.type.technical_debt": "Technical Debt",
+  "challenge.type.coherence": "Coherence Issue",
+  "challenge.type.strategic": "Strategic Initiative",
+  "challenge.type.efficiency": "Efficiency Gain",
+  "challenge.type.moonshot": "Moonshot",
+
+  "challenge.difficulty.starter": "Starter",
+  "challenge.difficulty.intermediate": "Intermediate",
+  "challenge.difficulty.advanced": "Advanced",
+  "challenge.difficulty.expert": "Expert",
+
+  "challenge.winner": "Winner",
+  "challenge.runner_up": "Runner Up",
+  "challenge.honorable": "Honorable Mention",
+  "challenge.not_selected": "Not Selected",
+
+  "challenge.judge.score": "Score Submission",
+  "challenge.judge.feedback": "Judge Feedback",
+  "challenge.judge.criteria.innovation": "Innovation",
+  "challenge.judge.criteria.feasibility": "Feasibility",
+  "challenge.judge.criteria.impact": "Impact",
+  "challenge.judge.criteria.presentation": "Presentation",
+  "challenge.judge.conflict": "Flag Conflict of Interest",
+
+  "challenge.filter.type": "Type",
+  "challenge.filter.difficulty": "Difficulty",
+  "challenge.filter.status": "Status",
+  "challenge.filter.reward": "Reward Type",
+  "challenge.sort.newest": "Newest",
+  "challenge.sort.closing_soon": "Closing Soon",
+  "challenge.sort.most_submissions": "Most Submissions",
+  "challenge.sort.highest_reward": "Highest Reward",
+
+  "challenge.detail.problem": "Problem Statement",
+  "challenge.detail.context": "Context & Background",
+  "challenge.detail.success_criteria": "Success Criteria",
+  "challenge.detail.judges": "Judges",
+  "challenge.detail.rewards": "Rewards",
+  "challenge.detail.discussion": "Discussion",
+  "challenge.detail.start_working": "Start Working on This",
+
+  "challenge.announcement.winners": "Winners Announced!",
+  "challenge.announcement.no_submissions": "No submissions received"
+}
